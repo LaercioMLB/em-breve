@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Em Breve — Nosso novo site</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="hero">
+    <div class="glow" aria-hidden></div>
+    <div class="container">
+      <!-- Logo da empresa (arquivo: img/logo.png) -->
+      <img src="img/logo_horizontal.png" alt="SOS Construir" class="brand-logo">
+      <h1 class="title">Em Breve</h1>
+      <p class="subtitle">Estamos preparando algo incrível. Volte em breve.</p>
+
+      <div class="subscribe">
+        <!-- Abre conversa com +55 45 9997-6544 -->
+  <a class="contact-btn" href="https://wa.me/554599976544?text=Ol%C3%A1%21%20Vim%20pelo%20site%20sosconstuir.com.br%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es" target="_blank" rel="noopener noreferrer">
+          <!-- Ícone inline do WhatsApp (acessível) -->
+          <svg aria-hidden="true" focusable="false" width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path fill="#fff" d="M20.52 3.48A11.89 11.89 0 0012.03.5C6.01.5 1.33 4.98.77 10.54c-.27 2.66.7 5.28 2.72 7.22L1 23l5.42-1.4a11.6 11.6 0 005.62 1.38h.02c6.02 0 10.7-4.48 11.26-10.04.56-5.55-3.82-10.06-9.1-10.06zM12.03 20.5h-.01c-1.73 0-3.43-.45-4.9-1.31l-.35-.21-3.23.84.86-3.15-.22-.36A8.34 8.34 0 013.72 10.5c0-4.6 4.02-8.34 8.31-8.34 4.29 0 8.31 3.74 8.31 8.34 0 4.6-4.02 8.34-8.31 8.34zm4.26-6.34c-.23-.12-1.36-.67-1.57-.75-.21-.08-.36-.12-.51.12s-.58.75-.71.9c-.13.16-.26.18-.49.06-.23-.12-1- .37-1.9-1.17-.7-.62-1.17-1.38-1.31-1.61-.14-.23-.01-.35.1-.47.1-.11.23-.26.35-.39.12-.13.16-.22.24-.37.08-.15.04-.28-.02-.4-.06-.11-.51-1.23-.7-1.69-.18-.44-.36-.38-.5-.39l-.43-.01c-.15 0-.4.06-.61.28s-.8.78-.8 1.9c0 1.12.82 2.2.93 2.36.12.16 1.6 2.44 3.88 3.42 2.28.98 2.28.65 2.69.61.41-.05 1.36-.55 1.55-1.08.19-.53.19-.99.13-1.08-.06-.09-.22-.15-.45-.27z"/>
+          </svg>
+          <span>Entre em contato</span>
+          <span class="visually-hidden">Abrir WhatsApp</span>
+        </a>
+      </div>
+
+      <footer class="footer">
+        <small>© <span id="year"></span> SOS Construir</small>
+      </footer>
+    </div>
+  </main>
+
+  <script>
+    // Inserir o ano atual
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

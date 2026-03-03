@@ -1,0 +1,52 @@
+/* Modern 'Em Breve' styles */
+:root{
+  /* Paleta inspirada na referência: azul escuro + laranja */
+  --bg1:#ffffff; /* content background */
+  --bg2:#f7fafc; /* subtle off-white */
+  --text:#08233f; /* deep navy for headings/text */
+  --accent:#f59e0b; /* warm orange */
+  --accent-2:#ff8a00; /* brighter orange */
+  --glass:rgba(8,35,63,0.04); /* subtle glass using navy */
+  --muted:rgba(8,35,63,0.6);
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial;
+  background:linear-gradient(135deg,var(--bg1) 0%,var(--bg2) 100%);
+  color:var(--text);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+}
+.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+.container{width:100%;max-width:880px;padding:48px 24px;text-align:center;position:relative;z-index:2}
+/* Logo */
+.brand-logo{display:block;margin:0 auto 20px;height:150px;object-fit:contain}
+
+.title{font-size:clamp(48px,10vw,96px);margin:0;font-weight:800;letter-spacing:0.02em;line-height:0.95;}
+.subtitle{margin-top:12px;margin-bottom:28px;color:var(--muted);font-weight:400;font-size:18px}
+.subscribe{display:inline-flex;background:var(--glass);backdrop-filter:blur(6px);border-radius:999px;padding:6px;gap:8px;align-items:center}
+.subscribe input{background:transparent;border:0;color:var(--text);padding:12px 16px;border-radius:999px;min-width:220px;outline:none}
+.subscribe input::placeholder{color:rgba(8,35,63,0.35)}
+.subscribe button{background:linear-gradient(90deg,var(--accent),var(--accent-2));border:0;color:#fff;padding:10px 18px;border-radius:999px;font-weight:600;cursor:pointer;box-shadow:0 6px 20px rgba(245,158,11,0.14);transition:transform .16s ease}
+.subscribe button:active{transform:translateY(1px)}
+.contact-btn{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(90deg,var(--accent),var(--accent-2));color:#fff;padding:10px 20px;border-radius:999px;font-weight:600;text-decoration:none;box-shadow:0 6px 20px rgba(245,158,11,0.14);transition:transform .16s ease}
+.contact-btn:active{transform:translateY(1px)}
+.contact-btn svg{width:20px;height:20px;flex:0 0 20px}
+.contact-btn span{display:inline-block;line-height:1}
+.message{margin-top:18px;font-size:15px;color:var(--muted)}
+.message.error{color:#dd5b3c}
+.footer{margin-top:28px;color:rgba(8,35,63,0.6)}
+.visually-hidden{position:absolute!important;height:1px;width:1px;overflow:hidden;clip:rect(1px,1px,1px,1px);white-space:nowrap}
+
+/* Decorative glow and shapes */
+.glow{position:absolute;left:50%;top:10%;width:1200px;height:1200px;transform:translateX(-50%);background:radial-gradient(circle at 30% 30%, rgba(245,158,11,0.08), transparent 18%), radial-gradient(circle at 70% 70%, rgba(8,35,63,0.06), transparent 20%);filter:blur(80px);pointer-events:none;opacity:0.95}
+
+/* Responsive adjustments */
+@media (max-width:520px){
+  .container{padding:32px 18px}
+  .subtitle{font-size:15px}
+  .subscribe input{min-width:140px}
+  .brand-logo{height:48px;margin-bottom:14px}
+}
